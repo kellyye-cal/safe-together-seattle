@@ -32,7 +32,7 @@
 
 
    
-
+<!--
     <div id="style-selector-control" class="map-control">
       <input
         type="radio"
@@ -51,7 +51,7 @@
       />
       <label for="show-poi">All Buildings</label>
     </div>
-
+  -->
 
 
     <div class = "TextBox">
@@ -69,6 +69,10 @@
       <div id = "All">
         <p id = "AllBox">All Buildings</p> 
       </div>
+      <div id = "Police">
+        <p id = "PoliceBox">Police Stations</p> 
+      </div>
+    
     </div>
 
   
@@ -78,7 +82,8 @@
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script>
         let map;
-        let markers = [];
+        let markers_Open = [];
+        let markers_Police = [];
         let gMap;
         var initialLocation;
 
@@ -106,22 +111,6 @@
 
 
 
-          //Add A Marker For my Current Location
-          const image =
-          "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
-
-          const beachMarker = new google.maps.Marker({
-            position: initialLocation,
-            gMap,
-            icon: image,
-          });
-
-          beachMarker.setMap(gMap);
-
-
-
-
-
           //Hiding / Showing Markers    
           // Add controls to the map, allowing users to hide/show features.
           const styleControl = document.getElementById("style-selector-control");
@@ -129,40 +118,44 @@
 
 
                   //Create Marker
-                  function createMarker(place) {
+                  function createMarker(place, holder) {
                     if (!place.geometry || !place.geometry.location) return;
 
                     const marker = new google.maps.Marker({
                       gMap,
                       position: place.geometry.location,
                     });
-                    markers.push(marker);
+                      holder.push(marker);
                   }
 
                   //Set all markers to the map
-                  function setMapOnAll(map) {
-                    for (let i = 0; i < markers.length; i++) {
-                      markers[i].setMap(map);
+                  function setMapOnAll(map, holder) {
+                    for (let i = 0; i < holder.length; i++) {
+                      holder[i].setMap(map);
                     }
                   }
 
-                  function hideMarkers() {
-                    setMapOnAll(null);
+                  function hideMarkers(holder) {
+                    setMapOnAll(null, holder);
                   }
 
 
-                  function showMarkers() {
-                    setMapOnAll(gMap);
+                  function showMarkers(holder) {
+                    setMapOnAll(gMap, holder);
                   }
 
-                   function deleteMarkers() {
-                     setMapOnAll(null);
+                   function deleteMarkers(holder) {
+                    hideMarkers(holder)
+                    markers_Open = [];
+                    markers_Police = [];
                   }
 
          
 
           // Apply new JSON when the user chooses to hide/show features.
           document.getElementById("Open").addEventListener("click", () => {
+                hideMarkers(markers_Police);
+                hideMarkers(markers_Open);
                   //gMap.setOptions({ styles: styles["hide"] });
                   //Nearby Search
                   var service;
@@ -185,10 +178,10 @@
                   function callback_Nearby(results, status) {
                       if (status == google.maps.places.PlacesServiceStatus.OK) {
                         for (var i = 0; i < results.length; i++) {
-                          createMarker(results[i]);
+                          createMarker(results[i], markers_Open);
                         }
                       }
-                      showMarkers();
+                      showMarkers(markers_Open);
                       change_text();
                   }
                   function change_text(){
@@ -199,13 +192,55 @@
 
           });
           document.getElementById("All").addEventListener("click", () => {
-            deleteMarkers();
+            hideMarkers(markers_Police);
+            hideMarkers(markers_Open);
             change_text_All();
             function change_text_All(){
               document.getElementById("boxHeader").innerHTML = "All Buildings For Now";
               document.getElementById("toChange").innerHTML = "You clicked the button, I am new paragraph.";
             }
             gMap.setOptions({ styles: styles["default"] });
+          });
+
+
+
+          //TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+          document.getElementById("Police").addEventListener("click", () => {
+            hideMarkers(markers_Police);
+            hideMarkers(markers_Open);
+
+            var service;
+            var infowindow;
+
+              
+            var request = {
+                  location: initialLocation,
+                  radius: '500',
+                  type: ['police']     
+            };
+
+
+          service = new google.maps.places.PlacesService(gMap);
+          service.nearbySearch(request, callback_Nearby);
+
+
+                  ///Change it!!!!! !!!!!!
+                  function callback_Nearby(results, status) {
+                      if (status == google.maps.places.PlacesServiceStatus.OK) {
+                        for (var i = 0; i < results.length; i++) {
+                          createMarker(results[i], markers_Police);
+                        }
+                      }
+                      showMarkers(markers_Police);
+                      change_text();
+                  }
+                  function change_text(){
+                    document.getElementById("boxHeader").innerHTML = "Police Stations";
+                    document.getElementById("toChange").innerHTML = "Ask the Police For help";
+                  }
+
+
+
           });
 
 

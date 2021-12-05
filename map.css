@@ -41,3 +41,13 @@ html,  body {
     width: 10%;
     height: 10%;
 }
+
+
+#Police{
+    background-color: #E8B7A2;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 10%;
+    height: 10%;
+}
