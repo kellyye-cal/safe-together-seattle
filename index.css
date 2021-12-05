@@ -20,7 +20,7 @@ body{
     font-size: 14px;
     border-radius: 3px;
     border: 1.5px solid gray;
-    outline-color: deepskyblue;
+    outline-color: rgb(110, 17, 110)
 }
 
 .custom-field .placeholder{

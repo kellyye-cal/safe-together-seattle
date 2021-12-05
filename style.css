@@ -26,26 +26,8 @@ body{
     width: 300px;
     font-size: 14px;
     border-radius: 3px;
-    border: 1.5px solid gray;
-    outline-color: deepskyblue;
-}
-
-.custom-field .placeholder{
-    position: absolute;
-    left: 12px;
-    top: calc(50% + 10px);
-    transform: translateY(-50%);
-    color: #aaa;
-    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
-}
-
-.custom-field input:valid + .placeholder,
-.custom-field input:focus + .placeholder{
-    top: 21px;
-    font-size: 10px;
-    color: #222;
-    padding: 5px;
-    background: white;
+    border: 1.5px solid rgb(255, 255, 255);
+    outline-color: #E8B7A2;
 }
 
 .message{
@@ -97,6 +79,16 @@ h3 {
     color: #FFFFFF;
     font-weight: 400;
 }
+
+h4 {
+    font-style: none;
+    font-size: 15px;
+    text-align: left;
+    margin-top: 5px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+}
+
 a {
     text-decoration: none;
     color: #FFFFFF;
