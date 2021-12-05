@@ -46,11 +46,12 @@
         </header>
 
         <br></br>
-        <div class="d-flex justify-content-center p-5">
-            <div class="card" style = "background-color: #E8B7A2; margin-left: 35%; margin-right: 35%;">
+        <center>
+        <div class="logincard">
+            <div class="card" style = "background-color: #E8B7A2; width:35%;">
 
                 <br></br>
-                <form onsubmit="login()" id="loginForm" class="card-body px-5 py-4">
+                <form onsubmit="login()" id="loginForm" class="card-body">
                     <center><small><span id="error" style="color: black"></span></small></center>
                     <center><label class="custom-field">
                         <h4 style="color:white; margin-left: 15%;">Email:</h4>
@@ -77,8 +78,19 @@
                     </center>
                     <br></br>
                 </form>
+            
             </div>
+
+            <div class="login-image">
+                <img src="login-img.png" width="15%" height="15%">
+            </div>
+    
         </div>
+        
+
+       
+        </center>
+
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
 

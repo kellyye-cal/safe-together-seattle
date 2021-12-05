@@ -15,7 +15,7 @@ body{
 }
 
 .custom-field{
-    position: relative;
+    /*position: relative;*/
     font-size: 14px;
     padding-top: 20px;
     margin-top: 5px;
@@ -181,7 +181,7 @@ a:visited {
     box-shadow: 0px 5px 5px gray;
 }
 
-
+/* buttons */
 
 .button {
     background-color: #EE8355;
@@ -200,4 +200,18 @@ a:visited {
 
 .button:hover {
     box-shadow: 0px 5px 5px gray;
+}
+
+.login-image {
+    position: relative;
+}
+
+.logincard {
+    z-index: 1;
+}
+
+.login-image {
+    z-index: 2;
+    margin-top: -60px;
+    margin-left: 500px;
 }
