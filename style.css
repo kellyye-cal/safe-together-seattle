@@ -212,3 +212,22 @@ a:visited {
     margin-top: -50px;
     margin-left: 450px;
 }
+
+#OpenBox {
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+}
+
+#AllBox {
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+}
+
+#PoliceBox {
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+}
+
+#OpenBox:hover, #AllBox:hover, #PoliceBox:hover {
+    cursor: pointer;
+}
