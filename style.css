@@ -67,9 +67,9 @@ h1 {
 }
 
 h2 {
-    font-family: 'Merriweather', serif;
+    font-family: 'Courgette', cursive;
     font-style: normal;
-    font-size: 50px;
+    font-size: 60px;
     margin-bottom: 5px;
     color: #FFFFFF;
 }
@@ -136,7 +136,7 @@ a:visited {
     margin-top: 10px;
     margin-right: auto;
     margin-bottom: 10px;
-    margin-left: auto;
+    margin-left: 7%;
 }
 
 #right {
@@ -147,7 +147,7 @@ a:visited {
     flex-direction: row;
     justify-content: center;
     margin-top: 10px;
-    margin-right: auto;
+    margin-right: 7%;
     margin-bottom: 10px;
     margin-left: auto;
     top: 50%;
