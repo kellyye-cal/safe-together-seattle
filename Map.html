@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
+    <title>Safe Together Seattle</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel = "stylesheet" href = "map.css" />
     <script src="./index.js"></script>
 
 
 
-    <style>/* Always set the map height explicitly to define the size of the div
-        * element that contains the map. */
-        #map {
-        height: 300px;
-        top: 50px;
-        left: 50px;
-        right: 50px;
-        }
-        
-        /* Optional: Makes the sample page fill the window. */
-        html,
-        body {
-        height: 80%;
-        margin: 0;
-        padding: 0;
-        }
- </style>
+    
+      <link rel="stylesheet" type="text/css" href="style.css"> 
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
 
 
   <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"> <h1> Safe Together Seattle </h1> </a>
+    </div>
+    <div class="nav">
+        <a href="map.html"> Map </a>
+        <a href="about.html"> About </a>
+        <a href="login.html"> Login </a>
+    </div>
+    </header>
+
+
+   
 
     <div id="style-selector-control" class="map-control">
       <input
@@ -37,7 +39,7 @@
         id="hide-poi"
         class="selector-control"
       />
-      <label for="hide-poi">Hide</label>
+      <label for="hide-poi">Open Buildings</label>
       <input
         type="radio"
         name="show-hide"
@@ -45,9 +47,20 @@
         class="selector-control"
         checked="checked"
       />
-      <label for="show-poi">Show</label>
+      <label for="show-poi">All Buildings</label>
+    </div>
+
+
+
+    <div class = "TextBox">
+      <div class = "box">
+        <h3> Open Buildings </h3>
+        <p> Seek for help when you needed</p>
+      </div>
     </div>
     
+
+
     <div id="map"></div>
 
     
@@ -76,9 +89,24 @@
               gMap.setZoom(17);
           }, function(positionError) {
               // User denied geolocation prompt - default to Seattle
-              gMap.setCenter(new google.maps.LatLng(47.6062, -122.3321));
+              initialLocation = new google.maps.LatLng(47.6062, -122.3321);
+              gMap.setCenter(initialLocation);
               gMap.setZoom(20);
           });
+
+
+
+          //Add A Marker For my Current Location
+          const image =
+          "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+
+          const beachMarker = new google.maps.Marker({
+            position: initialLocation,
+            gMap,
+            icon: image,
+          });
+
+          beachMarker.setMap(gMap);
 
 
 
@@ -189,23 +217,7 @@
     //Load the library for Google Places & Intialize Map
     </script>
 
- 
 
-
-
-   <!-- 
-    <script>
-      //Request details of opening hours
-      const request = {
-        placeId: "INSERT_PLACE_ID_HERE",
-        fields:["name", "opening_hours", "utc_offset_minutes"]
-      };
-
-      const service = new google.maps.places.PlacesService(gMap);
-      service.getDetails(request, callback);
-
-    </script>
-     -->
 
 
   </body>

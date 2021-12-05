@@ -1,0 +1,25 @@
+/* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+#map {
+    height: 370px;
+    width: 45%;
+    top: 130px;
+    left: 100px;
+}
+            
+/* Optional: Makes the sample page fill the window. */
+html,  body {
+    height: 80%;
+    margin: 0;
+    padding: 0;
+}
+
+.TextBox {
+    background-color: #E8B7A2;
+    position: absolute;
+    top: 220px;
+    right: 150px;
+    width: 300px; 
+    height: 370px;
+    box-shadow: 20px 20px #e77039;
+}
