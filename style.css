@@ -202,16 +202,13 @@ a:visited {
     box-shadow: 0px 5px 5px gray;
 }
 
-.login-image {
-    position: relative;
-}
-
 .logincard {
     z-index: 1;
 }
 
 .login-image {
+    position: relative;
     z-index: 2;
-    margin-top: -60px;
-    margin-left: 500px;
+    margin-top: -50px;
+    margin-left: 450px;
 }
