@@ -4,7 +4,7 @@ document.getElementById("loginForm").addEventListener("submit",(event)=>{
 
 firebase.auth().onAuthStateChanged((user)=>{
     if(user){
-        location.replace("welcome.html")
+        location.replace("forum.html")
     }
 })
 
@@ -26,6 +26,7 @@ function signUp(){
     });
 }
 
+/*
 function forgotPass(){
     const email = document.getElementById("email").value
     firebase.auth().sendPasswordResetEmail(email)
@@ -36,3 +37,4 @@ function forgotPass(){
         document.getElementById("error").innerHTML = error.message
     });
 }
+*/

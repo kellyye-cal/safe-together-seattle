@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Auth Demo</title>
+        <title>Login Page</title>
         <link
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         rel="stylesheet"
@@ -21,11 +21,13 @@
         type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
         ></script>
-        <link href="./index.css" rel="stylesheet" />
+        <link href="./style.css" rel="stylesheet" />
     </head>
     <body>
         <header>
-            <div> LOGO</div>
+            <div class="logo">
+                <h1> Safe Together Seattle </h1>
+            </div>
             <div class="nav">
                 <!-- Need to update link -->
                 <a href="index.html"> Map </a>
@@ -34,23 +36,29 @@
             </div>
         </header>
         <div class="d-flex justify-content-center p-5">
-            <div class="card">
-                <div class="card-header">
-                    <center><h3>Login Form</h3></center>
-                </div>
+            <div class="card" style = "background-color: #E8B7A2;">
+                
                 <form onsubmit="login()" id="loginForm" class="card-body px-5 py-4">
-                    <center><small><span id="error" style="color: red"></span></small></center>
+                    <center><small><span id="error" style="color: black"></span></small></center>
                     <center><label class="custom-field">
+                        <h4 style="color:white;">Email:</h4>
                         <input id="email" type="text" class="input" required />
+                        <!-- 
                         <span class="placeholder">Email Id</span>
+                        -->
                     </label><br />
                     <label class="custom-field">
+                        <h4 style="color:white;">Password:</h4>
                         <input id="password" type="password" class="input" required />
+                        <!-- 
                         <span class="placeholder">Password</span>
+                        -->
                     </label></center><br /><br/>
+                    <!-- 
                     <a href="#" onclick="forgotPass()">Forgot Password</a>
-                    <center><button type="submit" class="btn btn-primary">Login</button>
-                    <button onclick="signUp()" class="btn btn-secondary">Sign Up</button>
+                    -->
+                    <center><button type="submit" class="btn btn-light">Login</button>
+                    <button onclick="signUp()" class="btn btn-light">Sign Up</button>
                     </center>
                 </form>
             </div>
@@ -64,6 +72,6 @@
         <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
 
         <script src="firebase.js"></script>
-        <script src="index.js"></script>
+        <script src="login.js"></script>
     </body>
 </html>
