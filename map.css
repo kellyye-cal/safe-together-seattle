@@ -25,6 +25,13 @@ html,  body {
     box-shadow: 20px 20px #E8B7A2;
 }
 
+#boxHeader {
+    font-family: 'Courgette', cursive;
+    position:relative;
+    font-size: 35px;
+    margin: 0px;
+    margin-left: 20px;
+}
 
 #Open{
     background-color: #E8B7A2;
