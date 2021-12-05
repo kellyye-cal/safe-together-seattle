@@ -24,6 +24,14 @@ html,  body {
     box-shadow: 20px 20px #e77039;
 }
 
+#boxHeader {
+    font-family: 'Courgette', cursive;
+    position:relative;
+    font-size: 35px;
+    margin: 0px;
+    margin-left: 20px;
+}
+
 #Open{
     background-color: #E8B7A2;
     position: absolute;

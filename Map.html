@@ -89,11 +89,15 @@
 
 
 
+
+
         //Find the Location
         function initMap() {
           gMap = new google.maps.Map(document.getElementById("map"),  {
           mapTypeControl: false,
           });
+
+
 
 
           //source: https://stackoverflow.com/questions/17382128/google-maps-api-center-map-on-clients-current-location
@@ -109,6 +113,7 @@
               gMap.setZoom(20);
           });
 
+    
 
 
           //Hiding / Showing Markers    
