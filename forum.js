@@ -3,7 +3,7 @@ firebase.auth().onAuthStateChanged((user)=>{
         // go back to the landing page
         location.replace("index.html")
     }else{
-        //document.getElementById("user").innerHTML = "Hello, "+user.email
+        
     }
 })
 
