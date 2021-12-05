@@ -1,10 +1,10 @@
 /* Always set the map height explicitly to define the size of the div
         * element that contains the map. */
 #map {
-    height: 370px;
+    height: 80%;
     width: 45%;
-    top: 130px;
-    left: 100px;
+    top: 35%;
+    left: 10%;
 }
             
 /* Optional: Makes the sample page fill the window. */
@@ -20,6 +20,24 @@ html,  body {
     top: 220px;
     right: 150px;
     width: 20%; 
-    height: 370px;
+    height: 35%;
     box-shadow: 20px 20px #e77039;
+}
+
+#Open{
+    background-color: #E8B7A2;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 10%; 
+    height: 10%;
+}
+
+#All{
+    background-color: #E8B7A2;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 10%; 
+    height: 10%;
 }

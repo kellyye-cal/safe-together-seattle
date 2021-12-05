@@ -39,7 +39,6 @@
         name="show-hide"
         id="hide-poi"
         class="selector-control"
-        checked="checked"
       />
       <label for="hide-poi">Open Buildings</label>
       <input
@@ -47,6 +46,7 @@
         name="show-hide"
         id="show-poi"
         class="selector-control"
+        checked="checked"
        
       />
       <label for="show-poi">All Buildings</label>
@@ -60,9 +60,18 @@
         <p id = "toChange"> I want to change it to another paragraph.</p>
       </div>
     </div>
-    
 
 
+    <div class = "ControlBar">
+      <div id = "Open">
+        <p id = "OpenBox">Open Buildings</p> 
+      </div>
+      <div id = "All">
+        <p id = "AllBox">All Buildings</p> 
+      </div>
+    </div>
+
+  
     <div id="map"></div>
 
     
@@ -70,6 +79,8 @@
     <script>
         let map;
         let markers = [];
+        let gMap;
+        var initialLocation;
 
 
 
@@ -78,9 +89,6 @@
           gMap = new google.maps.Map(document.getElementById("map"),  {
           mapTypeControl: false,
           });
-
-          var initialLocation;
-         
 
 
           //source: https://stackoverflow.com/questions/17382128/google-maps-api-center-map-on-clients-current-location
@@ -152,8 +160,9 @@
                   }
 
          
+
           // Apply new JSON when the user chooses to hide/show features.
-          document.getElementById("hide-poi").addEventListener("click", () => {
+          document.getElementById("Open").addEventListener("click", () => {
                   //gMap.setOptions({ styles: styles["hide"] });
                   //Nearby Search
                   var service;
@@ -168,8 +177,8 @@
                   };
 
 
-                  service = new google.maps.places.PlacesService(gMap);
-                  service.nearbySearch(request, callback_Nearby);
+          service = new google.maps.places.PlacesService(gMap);
+          service.nearbySearch(request, callback_Nearby);
               
 
                   ///Change it!!!!! !!!!!!
@@ -189,7 +198,7 @@
 
 
           });
-          document.getElementById("show-poi").addEventListener("click", () => {
+          document.getElementById("All").addEventListener("click", () => {
             deleteMarkers();
             change_text_All();
             function change_text_All(){
@@ -202,7 +211,7 @@
 
  
 
-      }
+    
 
       const styles = {
       default: [],
@@ -219,6 +228,7 @@
         },
       ],
 
+}
 }
         
  
