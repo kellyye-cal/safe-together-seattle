@@ -215,17 +215,17 @@ a:visited {
 
 #OpenBox {
     text-align: center;
-    padding: 10px 20px 10px 20px;
+    padding: 5px 10px 5px 10px;
 }
 
 #AllBox {
     text-align: center;
-    padding: 10px 20px 10px 20px;
+    padding: 5px 10px 5px 10px;
 }
 
 #PoliceBox {
     text-align: center;
-    padding: 10px 20px 10px 20px;
+    padding: 5px 10px 5px 10px;
 }
 
 #OpenBox:hover, #AllBox:hover, #PoliceBox:hover {
