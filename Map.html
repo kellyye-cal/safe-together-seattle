@@ -57,7 +57,7 @@
     <div class = "TextBox">
       <div class = "box">
         <h3 id = "boxHeader"> /All Buildings/</h3>
-        <p id = "toChange"> I want to change it to another paragraph.</p>
+        <p id = "toChange"> Displays all buildings that are near your location.</p>
       </div>
     </div>
 
@@ -195,7 +195,7 @@
                   }
                   function change_text(){
                     document.getElementById("boxHeader").innerHTML = "/Open Buildings/";
-                    document.getElementById("toChange").innerHTML = "Seek for help when you needed";
+                    document.getElementById("toChange").innerHTML = "Displays all the buildings that are open near your location. If you are feeling unsafe, you can head into any of those buildings.";
                   }
 
 
@@ -206,7 +206,7 @@
             change_text_All();
             function change_text_All(){
               document.getElementById("boxHeader").innerHTML = "/All Buildings/";
-              document.getElementById("toChange").innerHTML = "You clicked the button, I am new paragraph.";
+              document.getElementById("toChange").innerHTML = "Displays all buildings that are near your location.";
             }
             gMap.setOptions({ styles: styles["default"] });
           });
@@ -245,7 +245,7 @@
                   }
                   function change_text(){
                     document.getElementById("boxHeader").innerHTML = "/Police Stations/";
-                    document.getElementById("toChange").innerHTML = "Ask the Police for help if you face serious issues that you feel you cannot deal it by yourself.";
+                    document.getElementById("toChange").innerHTML = "Displays all the police stations near your location. If you believe you are in danger, please head to any of those police stations for assistance.";
                   }
 
 
