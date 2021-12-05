@@ -70,3 +70,16 @@ a:visited {
     margin: max(20px, 5%);
     top: 50%;
 }
+
+/* Navbar Styles */
+
+#login-button {
+    background-color: #EE8355;
+    background-repeat: no-repeat;
+    padding: 5px 20px 5px 20px;
+    border-radius: 5px;
+}
+
+#login-button:hover {
+    box-shadow: 0px 5px 5px gray;
+}
