@@ -121,6 +121,7 @@ a:visited {
 #button:hover {
     cursor: pointer;
     background-color: #EE8355;
+    box-shadow: 0px 5px 5px gray;
 }
 
 #left {
