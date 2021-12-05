@@ -6,6 +6,10 @@ html {
 body{
     background: #A8D0DB;
     margin: 0;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -53,7 +57,7 @@ a:visited {
     flex-direction: row;
     justify-content: center;
     align-items: space-between;
-    margin: 10px 40px 10px 40px;
+    margin: 20px 0 20px 0;
     top: 50%;
     min-height: 500px;
     max-height: 800px;
@@ -82,4 +86,12 @@ a:visited {
 
 #login-button:hover {
     box-shadow: 0px 5px 5px gray;
+}
+
+.footer {
+    background-color: #E8B7A2;
+    text-align: center;
+    bottom: 0;
+    margin-bottom: 0;
+    margin-top: auto;
 }

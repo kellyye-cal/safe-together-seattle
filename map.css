@@ -6,7 +6,7 @@
     top: 35%;
     left: 10%;
 }
-            
+
 /* Optional: Makes the sample page fill the window. */
 html,  body {
     height: 80%;
@@ -19,7 +19,7 @@ html,  body {
     position: absolute;
     top: 220px;
     right: 150px;
-    width: 20%; 
+    width: 20%;
     height: 35%;
     box-shadow: 20px 20px #e77039;
 }
@@ -29,7 +29,7 @@ html,  body {
     position: absolute;
     top: 20%;
     left: 10%;
-    width: 10%; 
+    width: 10%;
     height: 10%;
 }
 
@@ -38,6 +38,6 @@ html,  body {
     position: absolute;
     top: 20%;
     left: 30%;
-    width: 10%; 
+    width: 10%;
     height: 10%;
 }
