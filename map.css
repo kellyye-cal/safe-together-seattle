@@ -1,10 +1,10 @@
 /* Always set the map height explicitly to define the size of the div
         * element that contains the map. */
 #map {
-    height: 80%;
-    width: 45%;
-    top: 35%;
-    left: 10%;
+    height: 95%;
+    width: 55%;
+    top: 32%;
+    left: 8%;
 }
 
 /* Optional: Makes the sample page fill the window. */
@@ -15,39 +15,74 @@ html,  body {
 }
 
 .TextBox {
-    background-color: #E8B7A2;
+    background-color: #EE8355;
+    border-radius: 8px;
     position: absolute;
-    top: 220px;
-    right: 150px;
-    width: 20%;
-    height: 35%;
-    box-shadow: 20px 20px #e77039;
+    top: 39%;
+    right: 8%;
+    width: 21%;
+    height: 40%;
+    box-shadow: 20px 20px #E8B7A2;
 }
+
 
 #Open{
     background-color: #E8B7A2;
+    border-radius: 8px;
     position: absolute;
-    top: 20%;
-    left: 10%;
+    top: 18%;
+    left: 8%;
     width: 10%;
-    height: 10%;
+    height: 7%;
+}
+
+#Open:hover {
+    box-shadow: 0px 5px 5px gray;
 }
 
 #All{
     background-color: #E8B7A2;
+    border-radius: 8px;
     position: absolute;
-    top: 20%;
-    left: 30%;
+    top: 18%;
+    left: 23%;
     width: 10%;
-    height: 10%;
+    height: 7%;
 }
 
+#All:hover {
+    box-shadow: 0px 5px 5px gray;
+}
 
 #Police{
     background-color: #E8B7A2;
+    border-radius: 8px;
     position: absolute;
-    top: 20%;
-    left: 50%;
+    top: 18%;
+    left: 38%;
     width: 10%;
-    height: 10%;
+    height: 7%;
+}
+
+#Police:hover {
+    box-shadow: 0px 5px 5px gray;
+}
+
+p{
+    color: white;
+}
+
+#boxHeader {
+    color: white;
+    margin-top: 8%;
+    margin-left: 8%;
+}
+
+#toChange {
+    color: white;
+    margin-left: 8%;
+    margin-right: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 32px;
 }

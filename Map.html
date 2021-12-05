@@ -56,7 +56,7 @@
 
     <div class = "TextBox">
       <div class = "box">
-        <h3 id = "boxHeader"> All Buildings For Now</h3>
+        <h3 id = "boxHeader"> /All Buildings/</h3>
         <p id = "toChange"> I want to change it to another paragraph.</p>
       </div>
     </div>
@@ -64,13 +64,17 @@
 
     <div class = "ControlBar">
       <div id = "Open">
+        <center>
         <p id = "OpenBox">Open Buildings</p> 
+        </center>
       </div>
       <div id = "All">
-        <p id = "AllBox">All Buildings</p> 
+        <center>
+        <p id = "AllBox">All Buildings</p> </center>
       </div>
       <div id = "Police">
-        <p id = "PoliceBox">Police Stations</p> 
+        <center>
+        <p id = "PoliceBox">Police Stations</p> </center>
       </div>
     
     </div>
@@ -185,7 +189,7 @@
                       change_text();
                   }
                   function change_text(){
-                    document.getElementById("boxHeader").innerHTML = "Open Buildings";
+                    document.getElementById("boxHeader").innerHTML = "/Open Buildings/";
                     document.getElementById("toChange").innerHTML = "Seek for help when you needed";
                   }
 
@@ -196,7 +200,7 @@
             hideMarkers(markers_Open);
             change_text_All();
             function change_text_All(){
-              document.getElementById("boxHeader").innerHTML = "All Buildings For Now";
+              document.getElementById("boxHeader").innerHTML = "/All Buildings/";
               document.getElementById("toChange").innerHTML = "You clicked the button, I am new paragraph.";
             }
             gMap.setOptions({ styles: styles["default"] });
@@ -235,8 +239,8 @@
                       change_text();
                   }
                   function change_text(){
-                    document.getElementById("boxHeader").innerHTML = "Police Stations";
-                    document.getElementById("toChange").innerHTML = "Ask the Police For help";
+                    document.getElementById("boxHeader").innerHTML = "/Police Stations/";
+                    document.getElementById("toChange").innerHTML = "Ask the Police for help if you face serious issues that you feel you cannot deal it by yourself.";
                   }
 
 
