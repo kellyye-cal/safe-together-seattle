@@ -39,6 +39,7 @@
         name="show-hide"
         id="hide-poi"
         class="selector-control"
+        checked="checked"
       />
       <label for="hide-poi">Open Buildings</label>
       <input
@@ -46,7 +47,7 @@
         name="show-hide"
         id="show-poi"
         class="selector-control"
-        checked="checked"
+       
       />
       <label for="show-poi">All Buildings</label>
     </div>
@@ -116,6 +117,7 @@
           //Hiding / Showing Markers    
           // Add controls to the map, allowing users to hide/show features.
           const styleControl = document.getElementById("style-selector-control");
+          gMap.controls[google.maps.ControlPosition.TOP_LEFT].push(styleControl);
 
 
                   //Create Marker
@@ -149,7 +151,7 @@
                      setMapOnAll(null);
                   }
 
-          gMap.controls[google.maps.ControlPosition.TOP_LEFT].push(styleControl);
+         
           // Apply new JSON when the user chooses to hide/show features.
           document.getElementById("hide-poi").addEventListener("click", () => {
                   //gMap.setOptions({ styles: styles["hide"] });
