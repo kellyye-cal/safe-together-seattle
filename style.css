@@ -15,7 +15,6 @@ body{
 }
 
 .custom-field{
-    /*position: relative;*/
     font-size: 14px;
     padding-top: 20px;
     margin-top: 5px;
@@ -30,20 +29,6 @@ body{
     outline-color: #E8B7A2;
 }
 
-/*
-.message{
-    font-size: 70px;
-    font-family: 'Ubuntu', sans-serif;
-    color: steelblue;
-}
-
-.success{
-    font-size: 18px;
-    margin-top: 15px;
-    color: seagreen;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-*/
 
 header {
     background-color: #E8B7A2;
