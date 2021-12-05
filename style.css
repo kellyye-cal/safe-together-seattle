@@ -3,6 +3,7 @@
 html {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
+    height: 100%;
 }
 body{
     background: #A8D0DB;
@@ -162,5 +163,6 @@ a:visited {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: space-between;
     margin: 20px 40px 20px 40px;
 }
