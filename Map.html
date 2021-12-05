@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Safe Together Seattle</title>
+    <meta name="viewport" content="width=device-width"> 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <link rel = "stylesheet" href = "map.css" />
@@ -54,8 +55,8 @@
 
     <div class = "TextBox">
       <div class = "box">
-        <h3> Open Buildings </h3>
-        <p> Seek for help when you needed</p>
+        <h3 id = "boxHeader"> All Buildings For Now</h3>
+        <p id = "toChange"> I want to change it to another paragraph.</p>
       </div>
     </div>
     
@@ -177,12 +178,22 @@
                         }
                       }
                       showMarkers();
+                      change_text();
+                  }
+                  function change_text(){
+                    document.getElementById("boxHeader").innerHTML = "Open Buildings";
+                    document.getElementById("toChange").innerHTML = "Seek for help when you needed";
                   }
 
 
           });
           document.getElementById("show-poi").addEventListener("click", () => {
             deleteMarkers();
+            change_text_All();
+            function change_text_All(){
+              document.getElementById("boxHeader").innerHTML = "All Buildings For Now";
+              document.getElementById("toChange").innerHTML = "You clicked the button, I am new paragraph.";
+            }
             gMap.setOptions({ styles: styles["default"] });
           });
 
@@ -193,6 +204,7 @@
 
       const styles = {
       default: [],
+
       hide: [
         {
           featureType: "poi.business",
